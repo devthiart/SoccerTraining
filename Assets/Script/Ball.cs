@@ -15,7 +15,6 @@ public class Ball : MonoBehaviour
     [SerializeField]
     private float KickForce = 10f;
 
-
     void Start()
     {
         myTransform = GetComponent<Transform>();
@@ -48,6 +47,12 @@ public class Ball : MonoBehaviour
             Kick(KickDirection, KickForce);
             onKick = false;
         }
+    }
+
+    public void Kick()
+    {
+        GetBackToStartPosition();
+        onKick = true;
     }
 
     private void Kick(Vector3 direction, float force)

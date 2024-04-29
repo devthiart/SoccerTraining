@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class BallGoalkeeper : MonoBehaviour
 {
     private Transform myTransform;
     private Vector3 myStartPosition;
@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         cameraPosition = GameObject.FindGameObjectWithTag("MainCamera").transform;
-        Debug.Log(cameraPosition.position.ToString());
+        // Debug.Log(cameraPosition.position.ToString());
     }
 
     void Update()

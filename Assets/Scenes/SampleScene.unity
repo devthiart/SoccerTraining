@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7302244, g: 0.7889752, b: 0.8498586, a: 1}
+  m_IndirectSpecularColor: {r: 0.7289013, g: 0.787388, b: 0.8504587, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -323,7 +323,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!135 &570823549
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570823547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0.12, z: -5.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,11 +420,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 570823547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 171d5154954d3324caa4e8f3e83723ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e46694bf6fc18b46ac41c848cdaf223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KickDirection: {x: 1, y: -1, z: -1}
-  KickForce: 10
+  MinKickForce: 5
+  MaxKickForce: 8
+  FrequencyKick: 0.5
+  MainCamera: {fileID: 0}
 --- !u!1 &592923484
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Space to Kick the Ball
+  m_text: 'Press Space to Start/Stop
 
     Press ESC to Reset Ball''s position'
   m_isRightToLeft: 0

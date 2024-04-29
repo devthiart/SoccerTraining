@@ -5,12 +5,12 @@ using UnityEngine;
 public class Director : MonoBehaviour
 {
     public bool RandomKick = false;
-    private Ball ball;
+    private BallGoalkeeper ball;
     private GameObject panelTutorial;
 
     void Start()
     {
-        ball = FindAnyObjectByType<Ball>();
+        ball = FindAnyObjectByType<BallGoalkeeper>();
         panelTutorial = GameObject.FindWithTag("Tutorial");
 
         if (RandomKick)
